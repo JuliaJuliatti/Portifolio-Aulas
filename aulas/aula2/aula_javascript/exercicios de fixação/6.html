@@ -1,0 +1,35 @@
+<script>
+
+
+//Solicite duas notas ao usuário e informe se está acima da média, e se é uma nota par, e mostre o resultado ao usuário.​
+
+            var nota1 = Number(window.prompt("Digite sua primeira nota:"))
+                
+            
+
+            var nota2 = Number(window.prompt("Digite sua segunda nota:"))
+                
+            
+            
+                var media = (nota1 + nota2)/2
+                if(media >= 5 && media % 2 == 0 ) {
+                    document.write(`Parabéns você está aprovado! e sua média é par ${media}`)
+                }
+
+                else if(media >= 5 && media % 2 != 0){
+                    document.write(`Parabéns você está aprovado! e sua média não é par ${media}`)                    
+                }
+
+                else if(media < 5 && media % 2 == 0){
+                    document.write(`Infelizmente você está não está aprovado! e sua média é par ${media}`)                    
+                }
+
+                else if(media < 5 && media % 2 != 0){
+                    document.write(`Infelizmente você está não está aprovado! e sua média não é par ${media}`)                    
+                 }
+        
+
+
+
+
+</script>

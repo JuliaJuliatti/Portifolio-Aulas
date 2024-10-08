@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Celsius para Fahrenheit</title>
+    <script>
+        function celsiusParaFahrenheit(celsius) {
+            return (celsius * 9/5) + 32;
+        }
+
+        function converterTemperatura() {
+            const celsius = Number(window.prompt("Digite a temperatura em Celsius:"));
+            const fahrenheit = celsiusParaFahrenheit(celsius);
+            document.write(`A temperatura de ${celsius}°C é igual a ${fahrenheit.toFixed(2)}°F.`);
+        }
+    </script>
+</head>
+<body>
+    <h1>Conversor Celsius para Fahrenheit</h1>
+    <button onclick="converterTemperatura()">Converter</button>
+</body>
+</html>

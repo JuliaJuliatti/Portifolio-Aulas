@@ -1,0 +1,59 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body{
+    font-family:"Poppins", sans-serif;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.container {
+    width: 700px;
+    padding: 20px;
+    background-color: rgb(255, 189, 138);
+    border-radius: 10px;
+    box-shadow: 0px 4px, 8px rgba(0,0,0,0.1);
+}
+
+h1{
+    color: #fc5549;
+    font-family:"Poppins", sans-serif;
+}
+
+.menu, .quantidade{
+    margin: 20px, 0;
+}
+
+select, input[type="number"]{
+    padding: 10px;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+
+button{
+    padding: 10px 20px;
+    font-family:"Poppins", sans-serif;
+    background-color: rgb(253, 218, 207);
+}
+
+button:hover{
+    background-color: rgb(223, 126, 23);
+}
+
+#resultado{
+    margin-top: 20px;
+    font-size: 10px;
+
+}

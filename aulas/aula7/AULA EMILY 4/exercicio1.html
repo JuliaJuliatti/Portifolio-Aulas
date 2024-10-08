@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Classe Carro</title>
+    <script>
+        class Carro {
+            constructor(marca, modelo, ano) {
+                this.marca = marca;
+                this.modelo = modelo;
+                this.ano = ano;
+            }
+
+            buzinar() {
+                return `${this.modelo} está buzinando`;
+            }
+        }
+
+        function mostrarCarro() {
+            const carro1 = new Carro('Volkswagen', 'Ford Ka', 2017);
+            const mensagem = `Marca: ${carro1.marca}, Modelo: ${carro1.modelo}, Ano: ${carro1.ano}. ${carro1.buzinar()}`;
+            
+            document.getElementById("resultado").innerText = mensagem;
+        }
+    </script>
+</head>
+<body>
+    <h1>Informações do Carro</h1>
+    <button onclick="mostrarCarro()">Mostrar Carro</button>
+    <p id="resultado"></p>
+</body>
+</html>

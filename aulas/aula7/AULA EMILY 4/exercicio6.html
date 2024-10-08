@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Classe Funcionario</title>
+    <script>
+        class Funcionario {
+            constructor(nome, salario) {
+                this.nome = nome;
+                this.salario = salario;
+            }
+        }
+
+        class Gerente extends Funcionario {
+            constructor(nome, salario, departamento) {
+                super(nome, salario);
+                this.departamento = departamento;
+            }
+
+            info() {
+                return `O nome do gerente é ${this.nome}, seu salário é R$ ${this.salario.toFixed(2)} e seu departamento é ${this.departamento}.`;
+            }
+        }
+
+        function mostrarInfoGerente() {
+            const gerente = new Gerente('Carlos', 5550, 'Marketing');
+            const mensagem = gerente.info();
+            document.getElementById("resultado").innerText = mensagem;
+        }
+    </script>
+</head>
+<body>
+    <h1>Informações do Gerente</h1>
+    <button onclick="mostrarInfoGerente()">Mostrar Informações</button>
+    <p id="resultado"></p>
+</body>
+</html>

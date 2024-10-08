@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variaveis</title>
+</head>
+<body>
+    <h1>Hello,World! Minha primeira aula de HTML e JS</h1>
+    <script>
+        //alert é para exivir uma mensagem(print)
+        window.alert("Olá eu sou o javascript, prazer!")
+        //perginta algo ao usuario podendo confirmar ou cancelar
+        window.confirm("Você está gostando de Front-end, né?")
+        
+        // var é a primeira forma de declarar uma variavel, mas foi substituida por let e const, porem em maquinas antigas é preferivel que se use var
+
+
+        //pergunta algo ao usuario e o usuario pode interagir(input)
+        var nome = window.prompt("Qual seu nome?")
+        document.write("Bem vindo!")
+
+        //para colocar em uma frase uma variavel eu uso crases.
+        document.write(`Olá ${nome}, saudade de você. 
+        <p> Bora para mais um semestre interessante!`) 
+
+        var nota1 = Number(window.prompt("Por favor, informe a primeira nota: "))
+        var nota2 = Number(window.prompt("Por favor, informe a segunda nota:  "))
+        var qntAulas = Number(window.prompt('Qual é a quantidade de aula dessa matéria: '))
+        var qntFaltas = Number(window.prompt("Qual a quantidade de faltas: "))
+        var opcao = Number(window.prompt("Digite 1 - media  2-quantidade de aulas  3-Aprovação por faltas "))
+
+        //como se fosse um if or else 
+
+        switch(opcao){
+            case 1:
+                //aqui vai ser criada uma nova variavl chamada media, nela vai ser realizado o calculo das notas que foram resgartadas la encima 
+                var media = ( nota1 + nota2)/2
+                document.write(`<br> ${nome}  sua média é de ${media}`)
+
+        
+                if(media > 6){
+                    document.write("Você está aprovado!")
+                }
+                else{
+                    document.write("Você está reprovado!")
+                }
+                break;
+            
+
+            case 2:
+                document.write(`A quantidade de aulas dessa materia é ${qntAulas}`)
+                break;
+            
+            case 3:
+                var percentualFaltas = qntAulas * 0.25
+                if(qntAulas == 0) {
+                    document.write("Você agora só precisa tirar nota acima de 95")
+                }
+                else if(qntFaltas > percentualFaltas){
+                    document.write('Sinto muito você esta reprovado')
+                    console.log(`qnt de faltas ${qntFaltas}, percentual permitido ${percentualFaltas}`)                    
+                }
+                else {
+                    document.write("Você está dentro do percentual permitido")
+                }
+                break;
+        }
+    
+        //laços de repetição
+
+        //for 
+
+        for(let i =1; i <10; i++){
+            console.write(`<p> ${i} </p>`);
+        }
+
+
+        //while 
+        let contador = 20
+        let limite = 50
+
+        
+        while(contador <= limite){
+            console.log(`numero atual ${contador}`)
+            contador++;
+
+        }
+
+        
+        
+
+    </script>
+    
+</body>
+</html>

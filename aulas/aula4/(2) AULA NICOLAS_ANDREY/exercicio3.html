@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de JSON</title>
+    <script>
+        // Definindo um objeto JSON
+        const pessoas = [
+            {
+                "nome": "João Silva",
+                "salario": 5000,
+                "rendimentoAnual": 5000 * 0.10
+            },
+            {
+                "nome": "Maria Oliveira",
+                "salario": 8000,
+                "rendimentoAnual": 8000 * 0.10
+            },
+            {
+                "nome": "Carlos Souza",
+                "salario": 6000,
+                "rendimentoAnual": 6000 * 0.10
+            }
+        ];
+
+        function mostrarInformacoes() {
+            const resultado = document.getElementById("resultado");
+            resultado.innerHTML = ""; // Limpa o conteúdo anterior
+
+            pessoas.forEach(pessoa => {
+                resultado.innerHTML += `<p>${pessoa.nome} - Salário: R$ ${pessoa.salario}, Rendimento Anual: R$ ${pessoa.rendimentoAnual.toFixed(2)}</p>`;
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Informações de Pessoas</h1>
+    <button onclick="mostrarInformacoes()">Mostrar Informações</button>
+    <div id="resultado"></div>
+</body>
+</html>

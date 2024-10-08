@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero {
+    width: 100%;
+    height: 80;
+    background: #fff;
+    position: relative;
+}
+
+nav {
+    width: 84%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 150px;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #606163;
+}
+
+nav ul li a:hover {
+    color: #bd5db7;
+}
+
+.info {
+    margin: 10% 8% 0;
+}
+
+.info h1 {
+    font-size: 3rem;
+    color: #444242;
+}
+
+.info h1 span {
+    color: #bd5db7;
+}
+
+.info h2 {
+    font-size: 2rem;
+    color: #444242;
+    margin: 10px 0;
+}
+
+.info p {
+    color: #606163;
+    line-height: 1.5;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.img-box {
+    width: 25%; 
+    height: 75%;
+    position: absolute;
+    bottom: 0;
+    right: 66px;
+}
+
+.img-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+main.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap:  32px;
+    padding: 60px;
+    justify-content: center;
+}
+
+main.cards section.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    width: calc(25% - 32px); /* Ajusta a largura para 25% menos a margem */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Ajuste máximo da altura */
+    max-height: 432px;
+    /* Certifique-se de que a altura mínima seja adequada */
+    min-height: 320px;
+    margin: 0; /* Remove a margem esquerda */
+}
+
+
+main.cards section.card .icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px;
+}
+
+main.cards section.card img {
+    width: 100%;
+    height: auto;
+    max-height: 150px; /* Define um máximo para a altura da imagem */
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+main.cards section.card h3 {
+    font-size: 1.5rem;
+    margin: 16px 0;
+}
+
+main.cards section.card span {
+    font-weight: 300;
+    max-width: 240px;
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+
+main.cards section.card button {
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-radius: 15px;
+    border: 0;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 16px 0;
+}
+
+/* padrao dos botoes dos cards */
+main.cards section.card.aula button {
+    background: linear-gradient(to right, #bd5db7, #e5d7e9);
+}
+
+
+/* padrao das sombras dos cards */
+main.cards section.card.aula {
+    box-shadow: 20px 20px 50px -30px #DBC4FF;
+}
+
+/* animação dos cards das aulas */
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.botao {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    text-transform: uppercase;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    color: #f69cf2;
+    background: linear-gradient(to right, #ad53c4, #d7b0e5);
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.botao:hover {
+    opacity: 0.8;
+}
+
+
+/* decoração */
+::-webkit-scrollbar{
+    width: 15px;
+}
+ 
+::-webkit-scrollbar-thumb{
+    background-color: #ad53c4;
+}
+ 
+ 
+::-webkit-scrollbar-track{
+    background-color: white;
+    width: 35px;
+}
+
+.meu-nome {
+    display: inline-block;
+    animation: trocandoCores 3s infinite; /* Chama a animação */
+}
+
+@keyframes trocandoCores {
+    0% {
+        color: #ad53c4; /* Cor inicial */
+    }
+    25% {
+        color: #8400ff; /* Segunda cor */
+    }
+    50% {
+        color: #d007d3; /* Terceira cor */
+    }
+    75% {
+        color: #ff00d9; /* Quarta cor */
+    }
+    100% {
+        color: #bd5db7; /* Retorna à cor inicial */
+    }
+}
+
+@media screen and (max-width: 720px) {
+    main.cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main.cards section.card {
+        width: 100%; /* Ajusta a largura para 100% em telas pequenas */
+        margin-bottom: 32px;
+    }
+
+    main.cards section.card:last-child {
+        margin-bottom: 0;
+    }
+
+    main.cards section.card button {
+        font-size: 0.875rem;
+    }
+
+}

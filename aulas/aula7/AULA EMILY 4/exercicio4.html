@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Classe Banco</title>
+    <script>
+        class Banco {
+            #saldo;
+
+            constructor(titular, saldo) {
+                this.titular = titular;
+                this.#saldo = saldo;
+            }
+
+            consultasaldo() {
+                if (this.#saldo < 0) {
+                    return "O saldo não pode ser negativo.";
+                } else {
+                    return "Saldo está correto.";
+                }
+            }
+        }
+
+        function verificarSaldo() {
+            const titular = window.prompt("Digite o nome do titular:");
+            const saldo = Number(window.prompt("Digite o saldo:"));
+            
+            const pessoa1 = new Banco(titular, saldo);
+            const mensagem = pessoa1.consultasaldo();
+            document.getElementById("resultado").innerText = mensagem;
+            console.log(mensagem); // Exibe a mensagem no console
+        }
+    </script>
+</head>
+<body>
+    <h1>Consulta de Saldo do Banco</h1>
+    <button onclick="verificarSaldo()">Verificar Saldo</button>
+    <p id="resultado"></p>
+</body>
+</html>

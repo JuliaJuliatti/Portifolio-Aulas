@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Classe Pessoa</title>
+    <script>
+        class Pessoa {
+            #idade;
+
+            constructor(nome, idade) {
+                this.nome = nome;
+                this.#idade = idade;
+            }
+
+            get idade() {
+                return this.#idade;
+            }
+
+            set idade(idadeNova) {
+                this.#idade = idadeNova;
+            }
+        }
+
+        function mostrarPessoa() {
+            const pessoa1 = new Pessoa("Julia", 18);
+            pessoa1.idade = 20; // Atualiza a idade
+            const mensagem = `Nome: ${pessoa1.nome}, Idade: ${pessoa1.idade}`;
+
+            document.getElementById("resultado").innerText = mensagem;
+            console.log(pessoa1.idade); // Exibe a idade no console
+        }
+    </script>
+</head>
+<body>
+    <h1>Informações da Pessoa</h1>
+    <button onclick="mostrarPessoa()">Mostrar Pessoa</button>
+    <p id="resultado"></p>
+</body>
+</html>

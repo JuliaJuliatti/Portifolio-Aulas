@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bem Vindo ao Restaurante da Júlia ! Aproveite os belos pratos </h1>
+        <div class="menu">
+            <label>Escolha seu Prato:</label>
+            <select id="prato">
+                <option value="0">Selecione seu prato</option>
+                <option value="35">Parmegiana R$35,00</option>
+                <option value="40">Picanha R$40,00</option>
+                <option value="20">Macarrão com molho bolonhesa R$20,00</option>
+                <option value="30">Estrogonoffe R$30,00</option>
+            </select>
+        </div>
+
+        <!-- para mostrar o resultado para o querido cliente -->
+         <div class="quantidade">
+            <label>Quantidade:</label>
+            <input type="number" id="quantidade" min="1" max="30" required>
+         </div>
+
+         <!-- botão para calcular resultado -->
+
+         <button onclick="calcularTotal()">Calcular Total</button>
+
+         <p id="resultado"></p>
+    </div>
+
+    <script >
+        function calcularTotal(){
+            var precoPrato = parseFloat(document.getElementById('prato').value);
+            var quantidade = parseInt(document.getElementById('quantidade').value);
+            console.log(precoPrato)
+            console.log(quantidade)
+
+            if(precoPrato === 0){
+                document.getElementById('resultado').textContent = "Por favor, selecione seu prato";
+            
+            }else if(quantidade < 0 || quantidade > 30){
+                document.getElementById('resultado').textContent = "Quantidade inválida";
+            }  
+            
+            else{
+                var total = precoPrato * quantidade;
+                document.getElementById('resultado').textContent = "Total a Pagar é " + total.toFixed(2)
+            }
+        }
+    </script>
+    
+</body>
+</html>

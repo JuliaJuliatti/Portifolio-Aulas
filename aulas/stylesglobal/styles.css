@@ -1,0 +1,128 @@
+/* Importando a fonte Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Resetando margens e preenchimentos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    flex-direction: column;
+}
+
+/* Estilos do header e navegação */
+header {
+    background-color: #bd5db7;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+/* Estilos do main */
+main {
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.intro h1 {
+    font-size:40px;
+    color: #bd5db7;
+}
+
+.intro p {
+    font-size: 20px;
+    color: #666;
+}
+
+.detalhe {
+    margin-bottom: 40px;
+}
+
+.detalhe h2 {
+    font-size: 30px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.detalhe p, .detalhe ul {
+    font-size: 20px;
+    color: #555;
+}
+
+.detalhe ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.detalhe ul li {
+    margin-bottom: 10px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    text-transform: uppercase;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    background: linear-gradient(to right, #ad53c4, #ead9f0);
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.botao:hover {
+    opacity: 0.8;
+}
+
+/* esse card container serve para arrumar os botoes que levam aos exercicios ficarem tres do lado do outro  */
+
+
+
+.card-exercicio {
+    display: inline-block;
+    padding: 20px; /* Aumentando o padding para um botão mais largo */
+    text-transform: uppercase;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    background: #bd5db7;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    width: 300px; /* Definindo uma largura fixa para o botão */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-exercicio:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Em JavaScript, funções são blocos de código que podem ser definidos uma vez e executados várias vezes. Elas permitem que você agrupe código para realizar uma tarefa específica, tornando seu código mais organizado e reutilizável.
+
+// (1) fazendo a função saudação
+
+function saudacao(){
+    alert("Olá,mundo!")
+}
+
+
+// (2) criando função somar
+function somar(a,b){
+    return a + b;
+}
+
+// (3) criando função somar varios numeros
+// caso o paramentro nao seja enviado, eu tenho um valor default que é o 0
+ function funcaoSomarVarios(n1 = 0 ,n2 = 0 ,n3 = 0,n4 = 0){ 
+    return n1 + n2 + n3 + n4
+ }
+ 
+
+
+
+// (4) chaamando a função  saudação
+saudacao() 
+
+// (5) chamando a função somar e guardando em uma váriavel
+
+var resultadoSomar = somar(1,5)
+alert(resultadoSomar)
+
+
+// (6) chamando a função somar varios números e guardando numa variavel, não estamos passando todos os parametros esperado porem como na funcao definimos que o valor inicial como zero automaticamente os parametros não declarados vão assumir o valor de 0.
+var resultadoSomarVarios = funcaoSomarVarios(2,4,6)
+alert(resultadoSomarVarios)
+
+
+
+    </script>
+</body>
+</html>

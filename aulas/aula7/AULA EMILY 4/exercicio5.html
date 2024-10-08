@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Dispositivos Eletrônicos</title>
+    <script>
+        class DispositivosEletronicos {
+            constructor(nome) {
+                this.nome = nome;
+                this.ligado = false;
+            }
+
+            ligar() {
+                if (!this.ligado) {
+                    this.ligado = true;
+                    return "Dispositivo ligado.";
+                } else {
+                    return "Dispositivo já está ligado.";
+                }
+            }
+
+            desligar() {
+                if (this.ligado) {
+                    this.ligado = false;
+                    return "Dispositivo desligado.";
+                } else {
+                    return "Dispositivo já está desligado.";
+                }
+            }
+
+            falarTchau() {
+                return "Tchau";
+            }
+        }
+
+        class Smartphone extends DispositivosEletronicos {
+            constructor(nome, cor, modelo) {
+                super(nome);
+                this.cor = cor;
+                this.modelo = modelo;
+            }
+
+            falarTchau() {
+                return "Oi";
+            }
+        }
+
+        function interagirComSmartphone() {
+            const smartphone = new Smartphone("Samsung", "Rosa", "Galaxy S10");
+            let mensagens = [];
+
+            mensagens.push(smartphone.ligar());
+            mensagens.push(smartphone.falarTchau());
+
+            document.getElementById("resultado").innerText = mensagens.join("\n");
+        }
+    </script>
+</head>
+<body>
+    <h1>Interação com Dispositivo Eletrônico</h1>
+    <button onclick="interagirComSmartphone()">Interagir com Smartphone</button>
+    <pre id="resultado"></pre>
+</body>
+</html>

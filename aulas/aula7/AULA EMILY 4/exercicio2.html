@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Classe Livro</title>
+    <script>
+        class Livro {
+            #anoPublicacao;
+
+            constructor(titulo, autor, anoPublicacao) {
+                this.titulo = titulo;
+                this.autor = autor;
+                this.#anoPublicacao = anoPublicacao;
+            }
+
+            get anoPublicacao() {
+                return this.#anoPublicacao;
+            }
+
+            set anoPublicacao(novoAno) {
+                this.#anoPublicacao = novoAno;
+            }
+
+            resumo() {
+                return `${this.autor} publicou esse livro "${this.titulo}" em ${this.anoPublicacao} e os dois morreram.`;
+            }
+        }
+
+        function mostrarLivro() {
+            const livro1 = new Livro('Pequeno Príncipe', 'Antoine de Saint-Exupéry', 2016);
+            livro1.anoPublicacao = 2017; // Atualiza o ano de publicação
+            const mensagem = livro1.resumo();
+
+            document.getElementById("resultado").innerText = mensagem;
+        }
+    </script>
+</head>
+<body>
+    <h1>Informações do Livro</h1>
+    <button onclick="mostrarLivro()">Mostrar Livro</button>
+    <p id="resultado"></p>
+</body>
+</html>
